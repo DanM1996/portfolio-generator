@@ -18,3 +18,18 @@ const writeFile = fileContent => {
     });
 });
 };
+
+const copyFile = () => {
+    return new Promise ((resolve, reject) => {
+        fs.copyFile('./dist/index.html', err => {
+            if (err) {
+                reject(err)
+                return;
+            }
+            resolve({
+                ok: true,
+                message: "Successfully copied a file!"
+            });
+        });
+    });
+};
