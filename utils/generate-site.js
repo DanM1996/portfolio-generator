@@ -33,3 +33,13 @@ const copyFile = () => {
         });
     });
 };
+// This line of code...
+
+// module.exports = {
+//     writeFile: writeFile,
+//     copyFile: copyFile
+// };
+
+// Does the same as this...
+module.exports = { writeFile, copyFile };
+// Shorthand property names (the code above) gives the writeFile and copyFile propety to both property name and its value, it just knows how to do it :)
